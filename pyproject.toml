@@ -1,0 +1,19 @@
+[project]
+name = "vllm-exp"
+version = "0.1.0"
+description = "Minimal uv-managed Python project for running vLLM experiments."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "vllm",
+]
+
+[project.scripts]
+vllm-exp = "vllm_exp.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
